@@ -17,8 +17,6 @@ FROM alpine:latest
 RUN apk update && apk --no-cache add ca-certificates
 RUN apk add --update tzdata jq curl coreutils
 ENV TZ=Asia/Jakarta
-# NOTE: should setup env due to different build
-ENV project=github.com/fajarhide/skeleton
 
 WORKDIR /bin
 COPY --from=build /build/keys/ keys/
