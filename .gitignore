@@ -1,0 +1,9 @@
+.DS_Store
+main
+.idea/
+vendor/
+
+## environemnt variable
+*.env
+*.env.staging
+build.sh

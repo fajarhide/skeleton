@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package user;
+
+message Empty {
+
+}
+
+message ResponseMessage {
+    string Message = 1;
+    string Email = 2;
+    string Name = 3;
+}
+
+message UserQuery {
+    string ID = 1;
+}
+
+service UserService {
+    rpc GetProfile(UserQuery) returns (ResponseMessage);
+}
+
